@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- select box(콤보 박스) -->
+    <!-- optgroup태그 사용 -->
+    <form action="#">
+        <fieldset>
+            <legend>개인 정보 입력</legend>
+            <label for="city">지역</label>
+            <select id="city">
+                <optgroup label="서울시">
+                    <option value="강북구">강북구</option> 
+                    <option value="강남구">강남구</option> 
+                    <option value="서초구"selected>서초구</option> 
+                </optgroup>
+                <optgroup label="경기도 성남시">
+                    <option value="중원구">중원구</option> 
+                    <option value="분당구">분당구</option>
+                </optgroup>
+            </select>
+            <input type="submit" value="등록">
+        </fieldset>
+    </form>
+
+    <form action="#">
+        <button type = "submit">
+         <img src="./images/facebook.png" alt="페이스북 버튼">
+         페이스북에 등록하기
+        </button>
+    </form>
+    <input type = "text"disabled>
+    <button type = "button" disabled>비활성화된 버튼</button>
+</body>
+</html>
