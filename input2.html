@@ -34,5 +34,23 @@
     </form>
     <input type = "text"disabled>
     <button type = "button" disabled>비활성화된 버튼</button>
+    <input type="text"readonly>
+    <!-- checked 속성 : 여러개의 아이템을 선택할 때 사용 -->
+    <form action="#">
+        <fieldset>
+            <legend>좋아하는 과일 선택</legend>
+            <input type="checkbox" id="banana" name="fruits" value="banana">
+            <label for="banana">banana</label>
+            <input type="checkbox" id="apple"name="fruits" value="apple">
+            <label for="apple">apple</label>
+            <input type="checkbox" id="orange" name="fruits" value="orange">
+            <label for="orange">orange</label>
+        </fieldset>
+    </form>
+    <form action="#">
+        <input type="tel" placeholder="전화번호 입력 하세요" required>
+        <input type="submit" value="전송">
+    </form>
+    
 </body>
 </html>
