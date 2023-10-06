@@ -1,60 +1,11 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
- 
-</head>
-<body>
-<h1>아이패드 주문하기</h1>
-    <fieldset>
-        <legend>배송정보</legend>
-        <p>
-            <label for="item">주문상품</label>
-            <input type="text" id="item">
-        </p>
-        <p>
-            <label for="name">이름</label>
-            <input type="text" id="name">
-        </p>
-        <p>
-            <label for="addr">배송주소</label>
-            <input type="text" id="addr">
-        </p>
-        <p>
-            <label for="email">이메일</label>
-            <input type="text" id="email">
-        </p>
-        <p>
-            <label for="phone">연락처</label>
-            <input type="tel" id="phone">
-        </p>
-        <p>
-            <label for="select">배송지정</label>
-            <input type="date" id="select">
-           
-            <input type = "text" id = "select" value="(주문일로부터 최소 3일 이후)" readonly = "readonly"></input>
-
-        </p>
-
-
-    </fieldset>
-    <input type="button" value="주문하기" padding:30px>
-    <input type="button" value="취소하기" padding:30px>
-    
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        label {
-            width: 100px;
+        label{
+            width : 100px;
             display: inline-block;
         }
         input {
@@ -62,63 +13,60 @@
             height: 24px;
             margin-bottom: 10px;
         }
-         input[type="date"] {
+        input[type="date"] {
             width: 150px;
-         }
-         span {
+        }
+        span {
             font-size: 80%;
-         }
-         button {
+        }
+        button{
             width: 150px;
             height: 40px;
             margin-left: 6px;
             margin-right: 6px;
-         }
-         .btn {
+        }
+        .btn{
             margin-top: 20px;
-
             display: flex;
             justify-content: center;
-         }
+        }
     </style>
 </head>
 <body>
     <h1>아이패드 주문하기</h1>
     <form action="#">
         <fieldset>
-            <legend>배송 정보</legend>
+            <legend>배송정보</legend>
             <div>
-                <label for="product">주문 상품</label>
-                <input type="text" id="product" value="아이패드 12.9인치" readonly>
+                <label for="item">주문상품</label>
+                <input type="text" id="item" value="아이패드 12.9인치" readonly>
             </div>
             <div>
                 <label for="name">이름</label>
-                <input type="text" id="name" autofocus>
+                <input type="text" id="name">
             </div>
             <div>
                 <label for="addr">배송주소</label>
-                <input type="text" id="addr" required>
+                <input type="text" id="addr">
             </div>
             <div>
                 <label for="email">이메일</label>
-                <input type="email" id="email">
+                <input type="text" id="email">
             </div>
             <div>
                 <label for="phone">연락처</label>
-                <input type="tel" id="phone" placeholder="하이픈을 빼고 입력">
+                <input type="tel" id="phone" placeholder="하이픈 제외하고 입력">
             </div>
             <div>
-                <label for="date">배송일 지정</label>
-                <input type="date" id="date">
-                <span>(주문일로 부터 최소 3일 이후)</span>
+                <label for="select">배송일 지정</label>
+                <input type="date" id="select">
+                <span>(주문일로부터 최소 3일 이후)</span> 
             </div>
         </fieldset>
         <div class="btn">
-            <button type="submit">주문하기</button>
-            <button type="reset">취소하기</button>
+            <button type="submit">주문하기</button> 
+            <button type="reset">취소하기</button> 
         </div>
-
     </form>
-    
 </body>
 </html>

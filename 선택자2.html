@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        li:first-child{
+            color: red;
+        }
+        li:last-child{
+            color: purple;
+        }
+        /* 가상의 부모의 모든 자식 요소 중 n 번째 자식 요소가 맞으면 선택 - 같은 형제태그 사이에 다른 태그가 있으면 적용하지 않음*/
+        p:nth-child(1){
+            color: rgb(40, 40, 229);
+            font-size: 1.2em;
+        }
+        /* 부모요소의 자식 요소 중 n 번째로 등장하는 요소 선택 - 같은 형제태그 사이에 다른 태그가 있으면 무시하고 적용함*/
+        p:nth-of-type(2){
+            color:brown;
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 구조적 가상 클래스 선택자 : 요소의 부모, 자식, 형제, 인접 요소 등을 기준으로 스타일을 적용-->
+    <!-- <ul>
+        <li>test 1</li>
+        <li>test 2</li>
+        <li>test 3</li>
+        <li>test 4</li>
+        <li>test 5</li>
+    </ul> -->
+    <p>그랜저</p>
+    <div>
+        <p>싼타페</p>
+        <span>쏘나타</span>
+        <p>쏘렌토</p>
+    </div>
+    <div>
+        <p>투싼</p>
+        <span>모닝</span>
+        <span>아무거나</span>
+        <p>스포티지</p>
+    </div>
+</body>
+</html>
