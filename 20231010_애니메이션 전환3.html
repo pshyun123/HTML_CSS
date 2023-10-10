@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: move;
+            animation-duration: 10s;
+            /* 진행방향 */
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+        }
+        @keyframes move {
+            from{
+                left:0;
+            }to{
+                left:300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- 버튼 동작에 이벤트 걸어주려면 자바 스크립트 써야함 -->
+        <button id="start">시작</button>
+        <button id="paused">일시정지</button>
+    </div>
+    <script>
+        // 자바 스크립트 코드 영역(직접 입력 / 링크걸기)
+        // 내가 감시해야할 1.이벤트(클릭)하면 2.콜백. function 익명의 함수로 콜백
+        const box = document.querySelector("div");
+        document.getElementById("start").addEventListener("click",function(){
+            box.style.animationPlayState = "running"
+        });
+        document.getElementById("paused").addEventListener("click",function(){
+            box.style.animationPlayState = "paused"
+        });
+    </script>
+</body>
+</html>

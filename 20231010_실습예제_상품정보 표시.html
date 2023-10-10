@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+       /* 컨테이너의 크기 지정 -> 컨테이너나 메인으로 감싼다 */
+       /* 대부분 바디에 바로 안하고 깔아줌 */
+       #container {
+        width: 1000px;
+        margin: 20px auto;
+        /* 가로 길이 알아서 조정 */
+       }
+       h1 {
+        text-align: center;
+        font-size: 30px;
+       }
+       /* list 대신 flex box 써줘도 가능  */
+       ul {
+        list-style: none;
+        padding: 0;
+       }
+       li {
+        /*가로 배치 */
+        float: left;
+        padding: 0px;
+        /* 문단 사이 간격 */
+        margin: 10px;
+        position: relative;
+        /* 이미지 밖으로 나갔을 때 안보이도록 */
+        overflow: hidden;
+       }
+       img{
+        margin: 0px;
+        padding: 0px;
+        z-index: 5;
+        float: left;
+       }
+       /* li 태그 기준으로.. 스태틱이면 안되기에 포지션 값 변경 */
+       li .caption{
+        /* 부모랑 같은 좌표 */
+        position: absolute;
+        top:-200px;
+        width: 300px;
+        height: 200px;
+        padding-top: 20;
+        background-color: rgba(0, 0, 0, .6);
+        /* 투명도 */
+        opacity: 0;
+        transition: .8s .2s ease-in-out;
+        z-index: 10;
+       }
+
+       li:hover .caption {
+        opacity: 1;
+        transform: translateY(200px);
+        }
+
+        .caption h3, .caption p {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = "container">
+    <h1>신상품 목록</h1>
+        <ul>
+            <li>
+                <img src="images/prod1.jpg" alt="상품1">
+                <div class="caption">
+                <h3>상품1</h3>
+                <p>상품1 설명텍스트</p>
+                <p>가격 : 12,345원</p>
+                </div>
+            </li>
+            <li><img src="images/prod2.jpg" alt="상품2">
+                <div class="caption">
+                <h3>상품2</h3>
+                <p>상품2 설명텍스트</p>
+                <p>가격 : 12,345원</p>
+                </div>
+            </li>
+            <li><img src="images/prod3.jpg" alt="상품3">
+                <div class="caption">
+                <h3>상품3</h3>
+                <p>상품3 설명텍스트</p>
+                <p>가격 : 12,345원</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 변형(transform)효과 : 회전, 이동, 크기조절, 기울기 조절 -->
+    <style>
+        body{
+            margin:0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* transition: 1s; */
+            margin: 100px;
+        }
+        /* 2차원 x,y*/
+        div:hover {
+            /* transform: translate(100px, 200px); */
+            /* transform: scaleX(2); */
+            /* transform: skewY(30deg); */
+            transform: rotate(30deg);
+            transform-origin: top left;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
