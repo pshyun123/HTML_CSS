@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+        /* 부모크기보다 자식의 이미지가 더 큰 경우 스크롤 처리 */
+        .parent {
+            width: 320px;
+            height: 240px;
+            border:1px solid black;
+            overflow: scroll; /* 내용이 설정한 크기보다 큰 경우에 대한 처리*/
+            overflow: local; /* 배경 이미지가 요소와 함께 스크롤되지만, 요소의 내부 콘텐츠와는 독립적으로 스크롤 */
+        }
+        .children {
+            height: 2000px;
+            background-image: url('images/activity.jpg');
+            background-attachment: scroll; /* 기본 값 */
+            background-attachment: fixed; /* 화면 고정,  자주 사용*/
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="children"></div>
+    </div>
+</body>
+</html>

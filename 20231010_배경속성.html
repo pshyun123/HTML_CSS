@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* background-color: <색상 값>  */
+        /* background-image: */
+        div{
+            width:100px;
+            height: 100px;
+            background-color: red;
+        }
+        .bg{
+            /* 배경 이미지 삽입 */
+            /* 원본 이미지보다 2배 크게 설정하였음 -> 자동으로 반복됨 -> background-repeat: no-repeat*/
+            width: 320px;
+            height: 300px;
+            border: 1px solid black;
+            background-image: url('images/coffee.jpg');
+            background-repeat: no-repeat;
+            /* size 속성 : auto(기본속성), cover, contain -> 화면 비율 유지 */
+            background-size: cover; 
+            /* background-size: contain; */
+            /* background-size: auto; */
+            /* background-size: 80px 60px; */
+            background-position: right;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 배경이미지 넣기 -->
+    <div></div>
+    <div class="bg"> </div>
+</body>
+</html>
