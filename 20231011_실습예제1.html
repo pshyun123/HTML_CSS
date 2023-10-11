@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,700;1,900&display=swap');
+   
+   
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   }
+   body{
+   font-family: 'Roboto', sans-serif;
+   }
+/* 전체 틀 만들어주기 */
+   #login{
+    height: 390px;
+    width: 304px;
+    padding: 28px 38px;
+    border: 1px solid #000;
+    /* 중앙정렬 */
+    margin:100px auto;
+   }
+/* 전체 로그인 필드에 선 없애기 - Legend 남기게 하기 위해서 */
+   #login fieldset{
+    border:none;
+   }
+
+/* 전체 로그인필드셋에 타이틀 이름(로그인, 일반로그인) 안보이게 */
+   #login fieldset legend{
+    position:absolute;
+    top:-99999px;
+
+   }
+/* 로그인 버튼 관련 */
+   #login button{
+    width: 228px;
+    height: 44px;
+    border:1px solid #000;
+    background-color: white;
+    font-weight: bold;
+   }
+/* Username, Password 넣는 곳 */
+   #login input{
+    width: 228px;
+    height: 44px;
+    border:1px solid #000;
+    padding: 0 10px;
+    margin-bottom: 21px;
+    background-color: #eaeaea;
+
+   }
+/* or 에 해당하는 필드셋 설정 */
+   #login > fieldset + p{
+    margin:24px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+   }
+/* 하단의 로그인 아이콘 */
+   #login button[type="submit"]{
+    background-color: #373f3c;
+    color: white;
+    margin-bottom: 27px;
+    font-weight: normal;
+   }
+/* 비밀번호 잊어버렸습니까의 텍스트값 */
+   #login a{
+    text-decoration: none;
+    color:#2c3422;
+    font-size:14px;
+    text-align: center;
+    display: block;
+   }
+   </style>
+</head>
+<body>
+    <form action="#" id="login">
+        <!-- fieldset 웹접근성이 좋음 -->
+        <fieldset>
+            <!-- legend 넣어서 시각장애인에게 알려주려고 -->
+            <legend>로그인</legend>
+            <button type="button">
+                <i class="fa-brands fa-google"></i>
+                Log in with Google
+            </button>
+        </fieldset>
+        <p>or</p>
+        <fieldset>
+            <legend>일반 로그인</legend>
+            <label for="username">
+                <input type="text" id="username" name="username" placeholder="Username">
+            </label>
+            <label for="password">
+                <input type="password" id="password" name="password" placeholder="Password">
+            </label>
+            <button type="submit">
+                LOGIN
+            </button>
+        </fieldset>
+        <a href="#">Forgot your password?</a>
+    </form>
+</body>
+</html>
