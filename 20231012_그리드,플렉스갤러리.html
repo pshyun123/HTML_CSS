@@ -2,9 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>갤러리만들기</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #eee;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 300px);
+            /* grid-template-rows: repeat(3,1fr); */
+            gap:1rem;
+
+        }
+        .cardview{
+            /* display:flex; */
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            box-shadow: 1px 1px 5px black;
+            border-radius: 4px;
+            /* 수직정렬 */
+            flex-flow: column wrap;
+            height: 320px;
+            padding: 20px;
+
+        }
+        .card-item-header{
+            font-size: 1.5rem;
+            text-align: left;
+            padding: 10px 0;
+
+        }
+
+        .card-item-image{
+            /* 사진 꽉 채우기 */
+            background-size: cover;
+            /* 카드뷰의 60퍼센트 */
+            height: 60%;
+
+        }
+        .card-item-desc{
+            font-size:0.8rem;
+            padding: 10px;
+
+        }
+        .image-1{
+            background-image: url(./images/cup-1.jpg);
+        }
+        .image-2{
+            background-image: url(./images/cup-2.jpg);
+        }
+        .image-3{
+            background-image: url(./images/cup-3.jpg);
+        }
+        .image-4{
+            background-image: url(./images/cup-4.jpg);
+        }
+        .image-5{
+            background-image: url(./images/cup-5.jpg);
+        }
+        .image-6{
+            background-image: url(./images/cup-6.jpg);
+        }
+        .image-7{
+            background-image: url(./images/cup-7.jpg);
+        }
+        .image-8{
+            background-image: url(./images/cup-7.jpg);
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div id="container">
+        <div class="cardview">
+            <div class="card-item-header">사진제목</div>
+            <div class="card-item-image image-1"></div>
+            <div class="card-item-desc">Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. Ullam, numquam. 
+                Neque mollitia esse blanditiis facere</div>
+        </div>
+        <div class="cardview">
+            <div class="card-item-header">사진제목</div>
+            <div class="card-item-image image-2"></div>
+            <div class="card-item-desc">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Ullam, numquam.
+                Neque mollitia esse blanditiis facere.</div>
+        </div>
+        <div class="cardview">
+            <div class="card-item-header">사진제목</div>
+            <div class="card-item-image image-3"></div>
+            <div class="card-item-desc">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Ullam, numquam.
+                Neque mollitia esse blanditiis facere.</div>
+        </div>
+        <div class="cardview">
+            <div class="card-item-header">사진제목</div>
+            <div class="card-item-image image-4"></div>
+            <div class="card-item-desc">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Ullam, numquam.
+                Neque mollitia esse blanditiis facere.</div>
+        </div>
+        <div class="cardview">
+            <div class="card-item-header">사진제목</div>
+            <div class="card-item-image image-5"></div>
+            <div class="card-item-desc">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Ullam, numquam.
+                Neque mollitia esse blanditiis facere.</div>
+        </div>
+        <div class="cardview">
+            <div class="card-item-header">사진제목</div>
+            <div class="card-item-image image-6"></div>
+            <div class="card-item-desc">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Ullam, numquam.
+                Neque mollitia esse blanditiis facere.</div>
+        </div>
+        <div class="cardview">
+            <div class="card-item-header">사진제목</div>
+            <div class="card-item-image image-7"></div>
+            <div class="card-item-desc">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Ullam, numquam.
+                Neque mollitia esse blanditiis facere.</div>
+        </div>
+        <div class="cardview">
+            <div class="card-item-header">사진제목</div>
+            <div class="card-item-image image-8"></div>
+            <div class="card-item-desc">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Ullam, numquam.
+                Neque mollitia esse blanditiis facere.</div>
+        </div>
+    </div>
 </body>
 </html>
