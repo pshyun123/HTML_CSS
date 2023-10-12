@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .grid-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: royalblue;
+            border: 1px solid orangered;
+        }
+        .grid-item:nth-child(2n){
+            background-color: orange;
+        }
+        .grid-container{
+            height: 400px;
+            width: 400px;
+            background-color: bisque;
+            display: grid;
+            /* 3개의 열, px, fr 혼용가능*/
+            /* grid-template-columns: 100px 1fr 100px; */
+            grid-template-columns: 100px 100px 100px;
+            justify-content: center;
+            align-items: center;
+            /* 반복횟수, fr은 가변 비율지정도 가능 */
+            /* grid-template-columns: repeat(5,1fr); */
+
+            /* auto-fit: 자동채우기, 컨테이너 기준->반응형 웹 사용 */
+            /* auto-fill: 자동채우기, 아이템 기준 */
+            /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+            /* 2개의 행 */
+            /* grid-template-rows: 100px 100px; */
+            /* grid-template-rows: repeat(2,minmax(200px,auto)); */
+            /* align-items: stretch; */
+            /* 행,열모두 */
+            gap: 10px;
+            /* row-gap: 10px;
+            column-gap: 10px; */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">그리드 박스 1번</div>
+        <div class="grid-item">그리드 박스 2번</div>
+        <div class="grid-item">그리드 박스 3번</div>
+        <div class="grid-item">그리드 박스 4번</div>
+        <div class="grid-item">그리드 박스 5번</div>
+    </div>
+</body>
+</html>
